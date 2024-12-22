@@ -35,7 +35,7 @@ const CricketScore = () => {
 
     return (
         <div className="w-full bg-gradient-to-b from-blue-500 to-indigo-600 ">
-            <div className="flex justify-center items-center mb-8 flex-col md:flex-row p-4">
+            <div className="flex justify-center items-center md:gap-6 mb-8 flex-col md:flex-row  p-4">
                 <input
                     type="text"
                     placeholder="Search Match or Series"
@@ -44,7 +44,7 @@ const CricketScore = () => {
                 />
                 <button
                     onClick={getData}
-                    className="px-4 w-full mt-4 py-2 bg-blue-600 text-white font-semibold rounded-r-lg hover:bg-blue-700"
+                    className="px-4 mt-4 md:mt-0 md:w-32 w-full py-2 bg-blue-600 text-white font-semibold rounded-r-lg hover:bg-blue-700"
                 >
                     Search
                 </button>
