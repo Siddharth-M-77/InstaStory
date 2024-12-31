@@ -1,13 +1,18 @@
+import { Route, Routes } from "react-router-dom";
+import InstaStory from "./components/InstaStory";
+import Upload from "./components/Upload";
 
-import React from "react";
-import CricketScore from "./CricketScore";
-
-function App() {
+const App = () => {
   return (
-    <div className="">
-    <CricketScore/>
-    </div>
-  );
-}
+    <>
+      
 
+      <Routes>
+        <Route path='/' element={<InstaStory />} />
+        <Route path='/uploads' element={<Upload />} />
+
+      </Routes>
+    </>
+  )
+}
 export default App;
