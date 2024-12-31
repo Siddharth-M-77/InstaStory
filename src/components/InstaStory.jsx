@@ -44,8 +44,8 @@ const InstaStory = () => {
                 </div>
             )}
 
-            <div className="flex w-full overflow-x-auto whitespace-nowrap items-center gap-2 lg:h-60 h-40 scrollbar-transparent">
-                {data?.length > 0 ? (
+            <div className="flex w-full overflow-x-auto whitespace-nowrap items-center gap-2   scrollbar-transparent">
+                {data?.length > 0 && (
                     data?.map((story, index) => (
                         <div
                             key={index}
@@ -71,16 +71,12 @@ const InstaStory = () => {
                             </button>
                         </div>
                     ))
-                ) : (
-                    <div className="h-52 w-52 shrink-0 flex items-center justify-center border-indigo-600 border-2 rounded-full bg-gray-200 text-gray-500">
-                        No Stories
-                    </div>
                 )}
             </div>
 
             {/* Upload Story Button */}
             <div className="lg:mt-10 mt-72">
-                <Link to={"/uploads"} className="px-6 py-3 bg-black rounded-md text-center text-white text-xl">
+                <Link to={"/uploads"} className="px-6 py-3 bg-black hover:bg-white hover:text-black text-center text-white text-xl border-indigo-600 border-4 rounded-lg">
                     Upload Story
                 </Link>
             </div>
