@@ -4,13 +4,16 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import StoryContextProvider from './context/StoryContext.jsx'
+import TodoProvider from './context/TodoContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <StoryContextProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </StoryContextProvider>
+    <TodoProvider>
+      <StoryContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </StoryContextProvider>
+    </TodoProvider>
   </StrictMode>,
 )
